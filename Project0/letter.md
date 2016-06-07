@@ -47,5 +47,5 @@ I know you can do it, because I'm you and you're awesome!
 
 Best,
 
-**E. Wilson,**
+**E,**
 **Frontend Developer**
