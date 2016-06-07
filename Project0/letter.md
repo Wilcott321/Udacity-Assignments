@@ -46,5 +46,6 @@ You should also keep note of the following study tips:
 I know you can do it, because I'm you and you're awesome!
 
 Best,
+
 **E. Wilson**
 **Frontend Developer**
