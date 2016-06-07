@@ -28,12 +28,12 @@ it to yourself to give your best effort even under an incredible amount of stres
 discipline, but it's the same discipline that will be expected of you when you obtain your first job role
 as a frontend developer. Therefore you should do the following when self-doubt and the urge to quit
 creeps in:
-1. Step back and breathe
-2. Go through the lecture videos one more time
-3. Review your notes
-4. Utilize Google and Stack Overflow
-5. Don't be afraid to ask questions
-6. Seek support before it's too late
+* Step back and breathe
+* Go through the lecture videos one more time
+* Review your notes
+* Utilize Google and Stack Overflow
+* Don't be afraid to ask questions
+* Seek support before it's too late
 
 You should also keep note of the following study tips:
 * Keep your workspace organized
