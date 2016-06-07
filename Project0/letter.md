@@ -11,7 +11,7 @@ than 3 months while also working full-time and volunteering as a mentor. Stickin
 study plan and schedule will probably be the hardest part for you.  In the past, you have 
 not been good with time conformity.
 
-The orientation probably made you nervous.  You probably are still thnking about whether you
+The orientation probably made you nervous.  You probably are still thinking about whether you
 will be able to complete all the projects on time. As the projects become more difficult, you
 may also want to quit, just so you can feel you have the time and space to just breathe without
 the pressure.  But while you are thinking about quitting, I want you to remember this note to
