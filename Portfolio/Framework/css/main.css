@@ -1,6 +1,6 @@
 /* Step one: Establish border boxes in order to see the grid*/
 * {
-	border: 1px solid red !important;
+	border: 1px solid green !important;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -10,7 +10,7 @@
 h1 {
 	color: green;
 }
-/* Step three: define your row. It should be full width*/
+/* Step three: define your row. It should be full width. Use flexbox to clear floats*/
 .row {
 	width: 100%;
 	display: flex;
@@ -53,4 +53,15 @@ in order to get the percentage of how much each width should be*/
 }
 .col-12 {
 	width: 100%;
+}
+/* Optional: add some negative space*/
+p {
+	margin: 10px;
+}
+/*Step Five: add your media queries for smaller screens*/
+@media only screen and (max-width: 500px) {
+	p {
+		background-color: #ffffcc;
+		color: green;
+	}
 }
