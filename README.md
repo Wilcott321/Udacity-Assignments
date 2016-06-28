@@ -5,8 +5,8 @@ To help me track my progress and play around with what I've learned, I created t
 
 ## Contents 
 1. Project 0: Letter Assignment
-..* We were assigned to write a motivational letter to ourselves outlining our learning goals and what we hope to achieve by the end of the program.
+  * We were assigned to write a motivational letter to ourselves outlining our learning goals and what we hope to achieve by the end of the program.
 2. Portfolio: A collection of different tasks I did in preparing for the Portfolio project
-..* Framework: We were assigned to build a CSS grid framework to structure columns. Mine is a basic 12-column grid with a test for media queries.
+  * Framework: We were assigned to build a CSS grid framework to structure columns. Mine is a basic 12-column grid with a test for media queries.
 3. Resume: A interactive resume powered by JavaScript and jQuery
-..* Credit to Chris Pittman for the code in the helper.js file. You can clone the master repo [here](https://github.com/udacity/frontend-nanodegree-resume) to follow along with the project.
+  * Credit to Chris Pittman for the code in the helper.js file. You can clone the master repo [here](https://github.com/udacity/frontend-nanodegree-resume) to follow along with the project.
