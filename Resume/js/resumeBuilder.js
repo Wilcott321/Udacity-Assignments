@@ -22,6 +22,9 @@ $("#header").prepend(formattedName);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
 
+/* The #topContacts section */
+for (contact in bio.contacts) {
+}
 
 
 
