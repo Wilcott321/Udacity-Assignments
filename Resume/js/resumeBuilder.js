@@ -37,7 +37,27 @@ var education = {
 			"location" : "Online, USA",
 			"major" : ["HTML & CSS", "Python"]
 		}
-	] //end of schools object array
+	], //end of schools object array
+	onlineCourses : [
+		{
+			"title" : "How to Use Git and Github",
+			"school" : "Udacity",
+			"dates" : "July 2016",
+			"url" : "www.udacity.com"
+		},
+		{
+			"title" : "JavaScript Basics",
+			"school" : "Udacity",
+			"dates" : "July 2016",
+			"url" : "www.udacity.com"
+		},
+		{
+			"title" : "Intro to jQuery",
+			"school" : "Udacity",
+			"dates" : "July 2016",
+			"url" : "www.udacity.com"
+		}
+	] //end of onlineCourses object array
 };
 // The work object
 var work = {
