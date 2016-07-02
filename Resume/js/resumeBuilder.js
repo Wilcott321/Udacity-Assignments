@@ -12,10 +12,17 @@ var bio = {
 	"skills" : ["HTML5", "CSS", "Bootstrap", "JavaScript", "jQuery"],
 	"bioPic" : "images/bioPic.png"
 };
-/* The header */
+/* The #header section */
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
+$("#header").append(formattedBioPic);
+$("#header").append(formattedWelcomeMsg);
+
+
+
 
 
