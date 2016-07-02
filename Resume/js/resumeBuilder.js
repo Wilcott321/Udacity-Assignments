@@ -42,6 +42,15 @@ $("#header").append(formattedWelcomeMsg);
 for (contact in bio.contacts) {
 }
 
+/* The #education section */
+var formattedSchool = HTMLschoolName.replace("%data%", education.name);
+var formattedDegree = HTMLschoolDegree.replace("%data%", education.degree);
+var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.dates);
+var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.location);
+var formattedMajor = HTMLschoolMajor.replace("%data%", education.major);
+
+/* The #workExperience section */
+
 
 
 
