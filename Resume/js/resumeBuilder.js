@@ -14,11 +14,29 @@ var bio = {
 };
 
 var education = {
-	"name" : "Udacity",
-	"degree" : "ND",
-	"dates" : "2016-2016",
-	"location" : "Online, USA",
-	"major" : "Frontend Web Developer"
+	"schools" : [
+		{
+			"name" : "Udacity",
+			"degree" : "ND",
+			"dates" : "2016-2016",
+			"location" : "Online, USA",
+			"major" : ["Frontend Web Developer"]
+		},
+		{
+			"name" : "Autodicdact University",
+			"degree" : "MA",
+			"dates" : "2015-2016",
+			"location" : "Online, USA",
+			"major" : ["JavaScript"]
+		},
+		{
+			"name" : "University of Hard Knocks",
+			"degree" : "BA",
+			"dates" : "2012-2015",
+			"location" : "Online, USA",
+			"major" : ["HTML & CSS", "Python"]
+		}
+	] //end of schools object array
 };
 
 var work = {
@@ -43,11 +61,7 @@ for (contact in bio.contacts) {
 }
 
 /* The #education section */
-var formattedSchool = HTMLschoolName.replace("%data%", education.name);
-var formattedDegree = HTMLschoolDegree.replace("%data%", education.degree);
-var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.dates);
-var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.location);
-var formattedMajor = HTMLschoolMajor.replace("%data%", education.major);
+
 
 /* The #workExperience section */
 
