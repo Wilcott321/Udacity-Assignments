@@ -10,7 +10,7 @@ var bio = {
 		"location" : "Illinois, USA"
 	},
 	"welcomeMsg" : "Hey there! I'm E. Wilson, a web aficionado specializing in frontend UI development and JavaScript programming.",
-	"skills" : ["HTML5", "CSS", "Bootstrap", "JavaScript", "jQuery"],
+	"skills" : ["HTML5", "CSS", "JavaScript", "jQuery"],
 	"bioPic" : "images/bioPic.png"
 };
 // The education object
@@ -110,6 +110,17 @@ $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+	$("#skills").append(formattedSkill);
+}
 
 /* The #topContacts section */
 for (contact in bio.contacts) {
@@ -119,6 +130,9 @@ for (contact in bio.contacts) {
 
 
 /* The #workExperience section */
+
+/* The #skillsChart section */
+
 
 
 
