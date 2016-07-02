@@ -1,6 +1,6 @@
 // The bio object
 var bio = {
-	"name" : "E. Wilson",
+	"name" : "Elliot Wilcott",
 	"role" : "Web Developer",
 	"contacts" : {
 		"mobile" : "000.000.0000",
@@ -9,7 +9,7 @@ var bio = {
 		"twitter" : "@OurCodeBlog",
 		"location" : "Illinois, USA"
 	},
-	"welcomeMsg" : "Hey there! I'm E. Wilson, a web aficionado specializing in frontend UI development and JavaScript programming.",
+	"welcomeMsg" : "Hey there! I'm Elliot Wilcott, a web aficionado specializing in frontend UI development and JavaScript programming.",
 	"skills" : ["HTML5", "CSS", "Bootstrap", "JavaScript", "jQuery"],
 	"bioPic" : "images/bioPic.png"
 };
@@ -127,20 +127,41 @@ for (contact in bio.contacts) {
 
 
 /* The #workExperience section */
-for (job in work.jobs) {
-	$("#workExperience").append(HTMLworkStart);
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-	var formattedEmployerTitle = formattedEmployer + formattedTitle;
-	$(".work-entry:last").append(formattedEmployerTitle);
-	var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-	$(".work-entry:last").append(formattedWorkDates);
-	var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-	$(".work-entry:last").append(formattedWorkLocation);
-	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-	$(".work-entry:last").append(formattedWorkDescription);
+function displayWork() {
+	for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		$(".work-entry:last").append(formattedEmployerTitle);
+		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		$(".work-entry:last").append(formattedWorkDates);
+		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		$(".work-entry:last").append(formattedWorkLocation);
+		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		$(".work-entry:last").append(formattedWorkDescription);
+	}
 }
-
+displayWork();
+/* The #projects section */
+projects.display = function() {
+	for (project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		$(".project-entry:last").append(formattedProjectTitle);
+		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append(formattedProjectDates);
+		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(formattedProjectDescription);
+		if (projects.projects[project].image.length > 0){
+			for (image in projects.projects[project].image) {
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].image[image]);
+				$(".project-entry:last").append(formattedImage);
+			} // end of image for-loop
+		} // end of project.images if-statement
+	} // end of project for loop
+} // end of function
+projects.display();
 /* The #skillsChart section */
 
 
