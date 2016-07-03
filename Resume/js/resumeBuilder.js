@@ -95,8 +95,25 @@ var work = {
 			"location" : "Chicago, IL",
 			"description" : "I build responsive, interactive web sites for non-profit organizations and small businesses."
 		},
-	] // end of jobs object array
+	], // end of jobs object array
+	/* The #workExperience section */
+	displayWork : function() {
+		for (job in work.jobs) {
+			$("#workExperience").append(HTMLworkStart);
+			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+			var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+			var formattedEmployerTitle = formattedEmployer + formattedTitle;
+			$(".work-entry:last").append(formattedEmployerTitle);
+			var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+			$(".work-entry:last").append(formattedWorkDates);
+			var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+			$(".work-entry:last").append(formattedWorkLocation);
+			var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+			$(".work-entry:last").append(formattedWorkDescription);
+		}
+	}
 };
+work.displayWork();
 // The projects object
 var projects = {
 	"projects" : [
@@ -130,23 +147,6 @@ for (contact in bio.contacts) {
 /* The #education section */
 
 
-/* The #workExperience section */
-function displayWork() {
-	for (job in work.jobs) {
-		$("#workExperience").append(HTMLworkStart);
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-		$(".work-entry:last").append(formattedEmployerTitle);
-		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		$(".work-entry:last").append(formattedWorkDates);
-		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-		$(".work-entry:last").append(formattedWorkLocation);
-		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$(".work-entry:last").append(formattedWorkDescription);
-	}
-}
-displayWork();
 /* The #projects section */
 projects.display = function() {
 	for (project in projects.projects) {
