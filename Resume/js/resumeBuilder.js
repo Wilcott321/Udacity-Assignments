@@ -20,21 +20,21 @@ var education = {
 			"name" : "Udacity",
 			"degree" : "ND",
 			"dates" : "2016-2016",
-			"location" : "Online, USA",
+			"location" : "Mountain View, CA",
 			"major" : ["Frontend Web Developer"]
 		},
 		{
 			"name" : "Autodicdact University",
 			"degree" : "MA",
 			"dates" : "2015-2016",
-			"location" : "Online, USA",
+			"location" : "Nashville, TN",
 			"major" : ["JavaScript"]
 		},
 		{
 			"name" : "University of Hard Knocks",
 			"degree" : "BA",
 			"dates" : "2012-2015",
-			"location" : "Online, USA",
+			"location" : "Chicago, IL",
 			"major" : ["HTML & CSS", "Python"]
 		}
 	], //end of schools object array
@@ -66,14 +66,14 @@ var work = {
 			"employer" : "Employer One",
 			"title": "Web Manager",
 			"dates" : "2014 - present",
-			"location" : "Illinois, USA",
+			"location" : "St. Louis, MO",
 			"description" : "Developer and manager of main sites and content management system. Responsble for training all staff on web standards and procedures."
 		},
 		{
 			"employer" : "Employer Two",
 			"title" : "Freelance Web Developer",
 			"dates" : "2014 - present",
-			"location" : "Online, USA",
+			"location" : "Chicago, IL",
 			"description" : "I build responsive, interactive web sites for non-profit organizations and small businesses."
 		},
 	] // end of jobs object array
@@ -164,7 +164,8 @@ projects.display = function() {
 projects.display();
 /* The #skillsChart section */
 
-
+/* The Map Section */
+$("#mapDiv").append(googleMap);
 
 
 
