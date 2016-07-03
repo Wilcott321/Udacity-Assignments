@@ -29,6 +29,29 @@ var bio = {
 			var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
 			$("#skills").append(formattedSkill);
 		}
+		/* The #topContacts section */
+		for (contact in bio.contacts) {
+			var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+			var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+			var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+			var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+		}
+		$("#topContacts").append(formattedMobile);
+		$("#topContacts").append(formattedEmail);
+		$("#topContacts").append(formattedGithub);
+		$("#topContacts").append(formattedTwitter);
+
+		/* The contacts  in the #footerContacts */
+		for (contact in bio.contacts) {
+			var formattedContact = HTMLcontactGeneric.replace("%contact%", bio.contacts);
+			formattedContact = formattedContact.replace("%data%", bio.contacts.contact);
+		}
+		/* formattedMobile = HTMLcontactGeneric.replace("%contact%", "mobile");
+		formattedMobile = formattedMobile.replace("%data%", bio.contacts.mobile);
+		$("#footerContacts").append(formattedMobile);
+		formattedEmail = HTMLcontactGeneric.replace("%contact%", "email");
+		formattedEmail = formattedEmail.replace("%data%", bio.contacts.email);
+		$("#footerContacts").append(formattedEmail); */
 	}
 };
 bio.display();
