@@ -135,9 +135,27 @@ var projects = {
 			"description" : "Designed and developed a real estate and touriste website for Lets Go Island using HTML5, CSS, and Bootstrap.",
 			"image" : ["images/197x148.gif"]
 		}
-	]
+	],
+	/* The #projects section */
+	display : function() {
+		for (project in projects.projects) {
+			$("#projects").append(HTMLprojectStart);
+			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+			$(".project-entry:last").append(formattedProjectTitle);
+			var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+			$(".project-entry:last").append(formattedProjectDates);
+			var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+			$(".project-entry:last").append(formattedProjectDescription);
+			if (projects.projects[project].image.length > 0){
+				for (image in projects.projects[project].image) {
+					var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].image[image]);
+					$(".project-entry:last").append(formattedImage);
+				} // end of image for-loop
+			} // end of project.images if-statement
+		} // end of project for loop	
+	} // end of display function
 };
-
+projects.display();
 
 
 /* The #topContacts section */
@@ -146,26 +164,6 @@ for (contact in bio.contacts) {
 
 /* The #education section */
 
-
-/* The #projects section */
-projects.display = function() {
-	for (project in projects.projects) {
-		$("#projects").append(HTMLprojectStart);
-		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$(".project-entry:last").append(formattedProjectTitle);
-		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$(".project-entry:last").append(formattedProjectDates);
-		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		$(".project-entry:last").append(formattedProjectDescription);
-		if (projects.projects[project].image.length > 0){
-			for (image in projects.projects[project].image) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].image[image]);
-				$(".project-entry:last").append(formattedImage);
-			} // end of image for-loop
-		} // end of project.images if-statement
-	} // end of project for loop
-} // end of function
-projects.display();
 /* The #skillsChart section */
 
 /* The Map Section */
