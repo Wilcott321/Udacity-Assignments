@@ -44,14 +44,9 @@ var bio = {
 		/* The contacts  in the #footerContacts */
 		for (contact in bio.contacts) {
 			var formattedContact = HTMLcontactGeneric.replace("%contact%", bio.contacts);
-			formattedContact = formattedContact.replace("%data%", bio.contacts.contact);
+			formattedContact = formattedContact.replace("%data%", bio.contacts[contact]);
+			$("#footerContacts").append(formattedContact);
 		}
-		/* formattedMobile = HTMLcontactGeneric.replace("%contact%", "mobile");
-		formattedMobile = formattedMobile.replace("%data%", bio.contacts.mobile);
-		$("#footerContacts").append(formattedMobile);
-		formattedEmail = HTMLcontactGeneric.replace("%contact%", "email");
-		formattedEmail = formattedEmail.replace("%data%", bio.contacts.email);
-		$("#footerContacts").append(formattedEmail); */
 	}
 };
 bio.display();
@@ -99,8 +94,24 @@ var education = {
 			"dates" : "July 2016",
 			"url" : "www.udacity.com"
 		}
-	] //end of onlineCourses object array
+	], //end of onlineCourses object array
+	display : function () {
+		for (school in education.schools) {
+			$("#education").append(HTMLschoolStart);
+			var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+			$(".education-entry:last").append(formattedName);
+			var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+			$(".education-entry:last").append(formattedDegree);
+			var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+			$(".education-entry:last").append(formattedDates);
+			var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+			$(".education-entry:last").append(formattedLocation);
+			var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+			$(".education-entry:last").append(formattedMajor);
+		}
+	}
 };
+education.display();
 // The work object
 var work = {
 	"jobs" : [
@@ -180,14 +191,6 @@ var projects = {
 };
 projects.display();
 
-
-/* The #topContacts section */
-for (contact in bio.contacts) {
-}
-
-/* The #education section */
-
-/* The #skillsChart section */
 
 /* The Map Section */
 $("#mapDiv").append(googleMap);
