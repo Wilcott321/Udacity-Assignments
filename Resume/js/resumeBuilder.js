@@ -11,8 +11,27 @@ var bio = {
 	},
 	"welcomeMsg" : "Hey there! I'm Elliot Wilcott, a web aficionado specializing in frontend UI development and JavaScript programming.",
 	"skills" : ["HTML5", "CSS", "Bootstrap", "JavaScript", "jQuery"],
-	"bioPic" : "images/bioPic.png"
+	"bioPic" : "images/bioPic.png",
+	display : function() {
+		/* The #header section */
+		var formattedName = HTMLheaderName.replace("%data%", bio.name);
+		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+		var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+		var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+		$("#header").prepend(formattedRole);
+		$("#header").prepend(formattedName);
+		$("#header").append(formattedBioPic);
+		$("#header").append(formattedWelcomeMsg);
+
+		/* The skills for-loop in the #header */
+		$("#header").append(HTMLskillsStart);
+		for (i = 0; i <= 4; i++){
+			var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+			$("#skills").append(formattedSkill);
+		}
+	}
 };
+bio.display();
 // The education object
 var education = {
 	"schools" : [
@@ -101,22 +120,7 @@ var projects = {
 		}
 	]
 };
-/* The #header section */
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").append(formattedBioPic);
-$("#header").append(formattedWelcomeMsg);
 
-/* The skills for-loop in the #header */
-$("#header").append(HTMLskillsStart);
-for (i = 0; i <= 4; i++){
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-	$("#skills").append(formattedSkill);
-}
 
 
 /* The #topContacts section */
