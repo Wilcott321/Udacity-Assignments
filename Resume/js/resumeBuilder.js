@@ -95,7 +95,7 @@ var education = {
 			"url" : "www.udacity.com"
 		}
 	], //end of onlineCourses object array
-	display : function () {
+	displaySchools : function(){
 		for (school in education.schools) {
 			$("#education").append(HTMLschoolStart);
 			var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -108,10 +108,25 @@ var education = {
 			$(".education-entry:last").append(formattedLocation);
 			var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
 			$(".education-entry:last").append(formattedMajor);
-		}
+		} // end of education school loop
+	},
+	displayCourses : function() {
+		$("#education").append(HTMLonlineClasses);
+		$("#education").append(HTMLonlineStart);
+		for (course in education.onlineCourses) {
+			var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+			var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+			var titleSchool = formattedTitle + formattedSchool;
+			$(".online-entry:last").append(titleSchool);
+			var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+			$(".online-entry:last").append(formattedOnlineDates);
+			var formattedUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+			$(".online-entry:last").append(formattedUrl);
+		}// end of online courses loop
 	}
-};
-education.display();
+}; // end of education object
+education.displaySchools();
+education.displayCourses();
 // The work object
 var work = {
 	"jobs" : [
