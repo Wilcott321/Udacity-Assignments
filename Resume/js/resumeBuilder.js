@@ -25,26 +25,14 @@ var bio = {
 
 		/* The skills for-loop in the #header */
 		$("#header").append(HTMLskillsStart);
-		for (i = 0; i <= 4; i++){
-			var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+		for (skill in bio.skills){
+			var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
 			$("#skills").append(formattedSkill);
 		}
-		/* The #topContacts section */
+		/* The #topContacts and #footerContacts for-loop */
 		for (contact in bio.contacts) {
-			var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-			var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-			var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-			var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-		}
-		$("#topContacts").append(formattedMobile);
-		$("#topContacts").append(formattedEmail);
-		$("#topContacts").append(formattedGithub);
-		$("#topContacts").append(formattedTwitter);
-
-		/* The contacts  in the #footerContacts */
-		for (contact in bio.contacts) {
-			var formattedContact = HTMLcontactGeneric.replace("%contact%", bio.contacts);
-			formattedContact = formattedContact.replace("%data%", bio.contacts[contact]);
+			var formattedContact = HTMLcontactGeneric.replace("%contact%", contact).replace("%data%", bio.contacts[contact]);
+			$("#topContacts").append(formattedContact);
 			$("#footerContacts").append(formattedContact);
 		}
 	}
