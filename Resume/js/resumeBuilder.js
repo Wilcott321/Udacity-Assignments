@@ -189,7 +189,7 @@ var projects = {
 					$(".project-entry:last").append(formattedImage);
 				} // end of image for-loop
 			} // end of project.images if-statement
-		} // end of project for loop	
+		} // end of project for loop
 	} // end of display function
 };
 projects.display();
