@@ -60,7 +60,7 @@ var education = {
 			"degree" : "BA",
 			"dates" : "2012-2015",
 			"location" : "Chicago, IL",
-			"major" : ["HTML & CSS", "Python"]
+			"major" : ["HTML & CSS", " Python"]
 		}
 	], //end of schools object array
 	onlineCourses : [
@@ -87,9 +87,9 @@ var education = {
 		for (school in education.schools) {
 			$("#education").append(HTMLschoolStart);
 			var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-			$(".education-entry:last").append(formattedName);
 			var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-			$(".education-entry:last").append(formattedDegree);
+			var formattedSchoolName = formattedName + formattedDegree;
+			$(".education-entry:last").append(formattedSchoolName);
 			var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 			$(".education-entry:last").append(formattedDates);
 			var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
@@ -227,10 +227,12 @@ var jsData = [
 	}
 ];
 // ChartJS objects for displaying the skills donuts
-var myHTMLDonut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(htmlData, {pecentageInnerCutout:80});
-var myCSSDonut = new Chart(document.getElementById("css").getContext("2d")).Doughnut(cssData, {percentageInnerCutout:80});
-var myJSDonut = new Chart(document.getElementById("js").getContext("2d")).Doughnut(jsData, {percentageInnerCutout:80});
-
+function displaySkills() {
+	var myHTMLDonut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(htmlData, {pecentageInnerCutout:80});
+	var myCSSDonut = new Chart(document.getElementById("css").getContext("2d")).Doughnut(cssData, {percentageInnerCutout:80});
+	var myJSDonut = new Chart(document.getElementById("js").getContext("2d")).Doughnut(jsData, {percentageInnerCutout:80});
+}
+displaySkills();
 /* The Map Section */
 $("#mapDiv").append(googleMap);
 
