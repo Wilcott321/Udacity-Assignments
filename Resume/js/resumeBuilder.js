@@ -206,6 +206,42 @@ var projects = {
 };
 projects.display();
 
+/* The Skills Section: Works with ChartJS */
+//ChartJS skills data objects that define value and color
+var htmlData = [
+	{
+		value: 90,
+		color: "#f5ae23"
+	},
+	{
+		value: 10,
+		color: "#f3f3f3"
+	}
+];
+var cssData = [
+	{
+		value: 75,
+		color: "#f5ae23"
+	},
+	{
+		value: 25,
+		color: "#f3f3f3"
+	}
+];
+var jsData = [
+	{
+		value: 55,
+		color: "#f5ae23"
+	},
+	{
+		value: 45,
+		color: "#f3f3f3"
+	}
+];
+// ChartJS objects for displaying the skills donuts
+var myHTMLDonut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(htmlData, {pecentageInnerCutout:80});
+var myCSSDonut = new Chart(document.getElementById("css").getContext("2d")).Doughnut(cssData, {percentageInnerCutout:80});
+var myJSDonut = new Chart(document.getElementById("js").getContext("2d")).Doughnut(jsData, {percentageInnerCutout:80});
 
 /* The Map Section */
 $("#mapDiv").append(googleMap);
