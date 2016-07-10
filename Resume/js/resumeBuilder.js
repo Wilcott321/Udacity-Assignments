@@ -1,17 +1,17 @@
 // The bio object
 var bio = {
-	"name" : "Elliot Wilcott",
-	"role" : "Web Developer",
-	"contacts" : {
+	name : "Elliot Wilcott",
+	role : "Web Developer",
+	contacts : {
 		"mobile" : "000.000.0000",
 		"email" : "example@email.com",
 		"github" : "@Wilcott321",
 		"twitter" : "@OurCodeBlog",
 		"location" : "Illinois, USA"
 	},
-	"welcomeMsg" : "Hey there! I'm Elliot Wilcott, a web aficionado specializing in frontend UI development and JavaScript programming.",
-	"skills" : ["HTML5", "CSS", "Bootstrap", "JavaScript", "jQuery"],
-	"bioPic" : "images/bioPic.png",
+	welcomeMsg : "Hey there! I'm Elliot Wilcott, a web aficionado specializing in frontend UI development and JavaScript programming.",
+	skills : ["HTML5", "CSS", "Bootstrap", "JavaScript", "jQuery"],
+	bioPic : "images/bioPic.png",
 	display : function() {
 		/* The #header section */
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -40,7 +40,7 @@ var bio = {
 bio.display();
 // The education object
 var education = {
-	"schools" : [
+	schools : [
 		{
 			"name" : "Udacity",
 			"degree" : "ND",
@@ -193,9 +193,8 @@ var projects = {
 	} // end of display function
 };
 projects.display();
-
 /* The Skills Section: Works with ChartJS */
-//ChartJS skills data objects that define value and color
+//ChartJS skills data objects that define value and color for each skill
 var htmlData = [
 	{
 		value: 90,
@@ -227,11 +226,11 @@ var jsData = [
 	}
 ];
 // ChartJS objects for displaying the skills donuts
-function displaySkills() {
+var displaySkills = function() {
 	var myHTMLDonut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(htmlData, {pecentageInnerCutout:80});
 	var myCSSDonut = new Chart(document.getElementById("css").getContext("2d")).Doughnut(cssData, {percentageInnerCutout:80});
 	var myJSDonut = new Chart(document.getElementById("js").getContext("2d")).Doughnut(jsData, {percentageInnerCutout:80});
-}
+};
 displaySkills();
 /* The Map Section */
 $("#mapDiv").append(googleMap);
