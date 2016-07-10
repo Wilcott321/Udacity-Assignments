@@ -10,5 +10,6 @@ To help me track my progress and play around with what I've learned, I created t
   * Framework: We were assigned to build a CSS grid framework to structure columns. Mine is a basic 12-column grid with a test for media queries.
 3. Resume: A interactive resume powered by JavaScript and jQuery
   * Credit to Chris Pittman for the code in the helper.js file. You can clone the master repo [here](https://github.com/udacity/frontend-nanodegree-resume) to follow along with the project.
+  * This project uses [Chart.js](https://github.com/nnnick/Chart.js/blob/master/LICENSE.md). Credit to Nick Downie, copywrite 2013, released under MIT license
 4. Commit: Create a commit following the [Udacity Style Guide](http://udacity.github.io/git-styleguide/)
   * I changed this README.md file to submit a sample commit to turn in. This should fulfill the requirements of that assignment.
