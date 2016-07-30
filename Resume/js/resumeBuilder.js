@@ -157,17 +157,17 @@ var projects = {
         title: 'Project One',
         dates: 'Spring 2016',
         description: 'Designed and developed Creative Template, a Bootstrap 3 theme for artists and developers to use as a resume and showcase of their work.',
-        images: ['images/197x148.gif']
+        images: ['images/197x148.gif', 'images/197x148.gif', 'images/197x148.gif']
     }, {
         title: 'Project Two',
         dates: 'Summer 2015',
         description: 'Redesigned and developed the business website for Operation Drive NFP using HTML5, CSS, Bootstrap, and jQuery.',
-        images: ['images/197x148.gif']
+        images: ['images/197x148.gif', 'images/197x148.gif', 'images/197x148.gif']
     }, {
         title: 'Project Three',
         dates: 'Spring 2015',
         description: 'Designed and developed a real estate and touriste website for Lets Go Island using HTML5, CSS, and Bootstrap.',
-        images: ['images/197x148.gif']
+        images: ['images/197x148.gif', 'images/197x148.gif', 'images/197x148.gif']
     }],
     /* The #projects section */
     display: function () {
