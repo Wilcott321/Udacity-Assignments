@@ -7,10 +7,25 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
 	<title>Meme Generator</title>
+
+	<style>
+		#image-container {
+			display: flex;
+		}
+	</style>
 </head>
 <body>
-	<canvas id="c" width="500" height="400"></canvas>
-
+	<div>
+		<input type="file" id="file"/>
+	</div>
+	<canvas width="500" height="400"></canvas>
+	<div>
+		<span>Top Line:</span><br/>
+		<input id="topLineText" type="text"><br/>
+		<span>Bottom LIne:</span><br/>
+		<input id="bottomLineText" type="text"><br/>
+		<button id="saveBtn">Save</button>
+	</div>
 	<!-- Scripts -->
 	<script>
 		/*Step 1: Create the canvas*/
@@ -26,7 +41,7 @@
 		}
 		/*Step 3: set the image to the source*/
 		image.src = "wonka.jpg";
-		/*Step 4: Style meme text to use*/
+		/*Step 4: Style meme text to use
 		ctx.font = "36pt Impact";
 		ctx.textAlign = "center";
 		ctx.fillStyle = "white";
@@ -34,7 +49,7 @@
 
 		ctx.strokeStyle = "black";
 		ctx.lineWidth = 3;
-		ctx.strokeText("CANVAS MEMES!", c.width/2, 40);
+		ctx.strokeText("CANVAS MEMES!", c.width/2, 40); */
 
 	</script>
 </body>
