@@ -156,17 +156,17 @@ var projects = {
     projects: [{
         title: 'Project One',
         dates: 'Spring 2016',
-        description: 'Designed and developed Creative Template, a Bootstrap 3 theme for artists and developers to use as a resume and showcase of their work.',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt justo lorem, ut vehicula odio pretium sed. Sed dictum, dolor nec fringilla porttitor, mauris nunc ultricies nibh, sed condimentum sem mauris non sem. Sed et ipsum mattis, porttitor ligula id, auctor tellus.',
         images: ['images/197x148.gif', 'images/197x148.gif', 'images/197x148.gif']
     }, {
         title: 'Project Two',
         dates: 'Summer 2015',
-        description: 'Redesigned and developed the business website for Operation Drive NFP using HTML5, CSS, Bootstrap, and jQuery.',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt justo lorem, ut vehicula odio pretium sed. Sed dictum, dolor nec fringilla porttitor, mauris nunc ultricies nibh, sed condimentum sem mauris non sem. Sed et ipsum mattis, porttitor ligula id, auctor tellus.',
         images: ['images/197x148.gif', 'images/197x148.gif', 'images/197x148.gif']
     }, {
         title: 'Project Three',
         dates: 'Spring 2015',
-        description: 'Designed and developed a real estate and touriste website for Lets Go Island using HTML5, CSS, and Bootstrap.',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt justo lorem, ut vehicula odio pretium sed. Sed dictum, dolor nec fringilla porttitor, mauris nunc ultricies nibh, sed condimentum sem mauris non sem. Sed et ipsum mattis, porttitor ligula id, auctor tellus.',
         images: ['images/197x148.gif', 'images/197x148.gif', 'images/197x148.gif']
     }],
     /* The #projects section */
