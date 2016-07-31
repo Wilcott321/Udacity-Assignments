@@ -47,7 +47,7 @@
 		/* Step 2: define a function that creates a two-dimensional canvas*/
 		function redrawMeme(image, topLine, bottomLine) {
 			var canvas = document.querySelector("canvas");
-			var ctx = c.getContext("2d");
+			var ctx = canvas.getContext("2d");
 			/*Step 3: style the Meme text using canvas fill and stroke methods*/
 			ctx.font = "36pt Impact";
 			ctx.textAlign = "center";
