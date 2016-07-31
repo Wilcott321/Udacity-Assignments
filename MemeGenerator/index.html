@@ -7,7 +7,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
 	<title>Meme Generator</title>
-
+	<!-- styles -->
 	<style>
 		#image-container {
 			display: flex;
@@ -30,6 +30,8 @@
 	</div>
 	<!-- Scripts -->
 	<script>
+		/* Step 1: create an event listener for when text is added to the top or bottom line by
+		setting the target to input ids within a conditional*/
 		function textChangeListener(evt) {
 			var id = evt.target.id;
 			var text = evt.target.value;
@@ -39,20 +41,22 @@
 			} else {
 				window.bottomLineText = text;
 			}
-
+			// calls the redrawMeme() function defined below with these parameters
 			redrawMeme(window.imageSrc, window.topLineText, window.bottomLineText);
 		}
-
+		/* Step 2: define a function that creates a two-dimensional canvas*/
 		function redrawMeme(image, topLine, bottomLine) {
 			var canvas = document.querySelector("canvas");
 			var ctx = c.getContext("2d");
-
+			/*Step 3: style the Meme text using canvas fill and stroke methods*/
 			ctx.font = "36pt Impact";
 			ctx.textAlign = "center";
 			ctx.fillStyle = "white";
 			ctx.strokeStyle = "black";
 			ctx.lineWidth = 3;
-
+			/*Step 4: create two conditional statements for the topLine and bottomLine
+			If the line is not null, style text added by the user using the following
+			width and height parameters */
 			if (topLine != null) {
 				ctx.fillText(topLine, canvas.width/2, 40);
 				ctx.strokeText(topLine, canvas.width/2, 40);
@@ -63,11 +67,11 @@
 				ctx.strokeText(bottomLine, canvas.width/2, canvas.height-20);
 			}
 		}
-
+		/* Step 5: create a save function for files */
 		function saveFile() {
 			window.open(document.querySelector('canvas').toDataURL());
 		}
-
+		/* Step 6: create a function for handling image files */
 		function handleFileSelect(evt) {
 			var canvasWidth = 500;
 			var cavasHeight = 500;
@@ -90,7 +94,7 @@
 			};
 			reader.readAsDataURL(file)
 		}
-
+		/* Step 7: Add text from the canvas to the input elements within #image-container */
 		window.topLineText = "";
 		window.bottomLineText = "";
 		var input1 = document.getElementById('topLineText');
