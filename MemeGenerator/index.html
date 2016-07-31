@@ -48,6 +48,9 @@
 		function redrawMeme(image, topLine, bottomLine) {
 			var canvas = document.querySelector("canvas");
 			var ctx = canvas.getContext("2d");
+			if (image != null) {
+				ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+			}
 			/*Step 3: style the Meme text using canvas fill and stroke methods*/
 			ctx.font = "36pt Impact";
 			ctx.textAlign = "center";
@@ -90,7 +93,7 @@
 
 				//Set image data to background image
 				image.src = data;
-				console.log(fileObject.target.result);
+				//console.log(fileObject.target.result);
 			};
 			reader.readAsDataURL(file)
 		}
