@@ -53,7 +53,8 @@ function loadData() {
     });
 
     /*Because the Wikipedia API supports CORS, we used JSONP to create
-    the ajax request below.*/
+    the ajax request below. Also uses shorthand ajax syntax and a setTimeout function
+    for error handling*/
     var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
 
     var wikiRequestTimeout = setTimeout(function(){
