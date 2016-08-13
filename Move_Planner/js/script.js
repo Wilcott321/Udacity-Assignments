@@ -36,7 +36,9 @@ function loadData() {
     a success handler function.
     Notes: You will need an API key from developer.nytimes.com.
     A counter was created to iterate through the responses and post the article
-    within the <li> list*/
+    within the <li> list.
+    For error-handling, chain a .error() method to the end of the request with
+    a message that is presented to users if articles can't be loaded. */
     var nytimesUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key=abb9d7371d9b42dbb45de3ad6087274b'
     $.getJSON(nytimesUrl, function(data){
         $nytHeaderElem.text('New York Times Articles About ' + cityStr);
@@ -46,7 +48,9 @@ function loadData() {
             $nytElem.append('<li class="article">' + '<a href="'+article.web_url+'">'+article.headline.main+'</a>'+
                 '<p>' + article.snippet + '</p>'+'</li>');
         };
-    })
+    }).error(function(e){
+        $nytHeaderElem.text('Sorry, New York Times articles could not be loaded. Please check the API key');
+    });
 
     return false;
 };
