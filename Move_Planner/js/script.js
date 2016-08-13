@@ -20,6 +20,13 @@ function loadData() {
     var cityStr = $('#city').val();
     var address = streetStr + ',' + cityStr;
 
+    /* Create a greeting object and assign it a string with a greeting plus
+    the address the user has entered in the form. You can do so by using your
+    address object */
+    $greeting.text('So, you want to live at ' + address + '?');
+
+    /**/
+
     // YOUR CODE GOES HERE!
 
     return false;
