@@ -52,8 +52,28 @@ function loadData() {
         $nytHeaderElem.text('Sorry, New York Times articles could not be loaded. Please check the API key');
     });
 
+    /*Because the Wikipedia API supports CORS, we used JSONP to create
+    the ajax request below.*/
+    var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
+
+    $.ajax({
+        url: wikiUrl,
+        dataType: "jsonp",
+        // jsonp: "callback",
+        success: function( response ) {
+            var articleList = response[1];
+
+            for (var i = 0; i < articleList.length; i++) {
+                articleStr = articleList[i];
+                var url = 'http://en.wikipedia.org/wiki/' + articleStr;
+                $wikiElem.append('<li><a href="' + url + '">' +
+                articleStr + '</a></li>');
+            };
+        }
+    });
+
     return false;
-};
+}
 
 // Calls the function and places it in the form container
 $('#form-container').submit(loadData);
