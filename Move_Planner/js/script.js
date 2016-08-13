@@ -18,7 +18,7 @@ function loadData() {
     the street and city in the address. */
     var streetStr = $('#street').val();
     var cityStr = $('#city').val();
-    var address = streetStr + ',' + cityStr;
+    var address = streetStr + ', ' + cityStr;
 
     /* Create a greeting object and assign it a string with a greeting plus
     the address the user has entered in the form. You can do so by using your
