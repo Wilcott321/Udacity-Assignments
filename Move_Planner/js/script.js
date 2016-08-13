@@ -39,7 +39,7 @@ function loadData() {
     within the <li> list.
     For error-handling, chain a .error() method to the end of the request with
     a message that is presented to users if articles can't be loaded. */
-    var nytimesUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key=abb9d7371d9b42dbb45de3ad6087274b'
+    var nytimesUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key='
     $.getJSON(nytimesUrl, function(data){
         $nytHeaderElem.text('New York Times Articles About ' + cityStr);
         articles = data.response.docs;
