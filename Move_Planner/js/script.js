@@ -22,10 +22,14 @@ function loadData() {
 
     /* Create a greeting object and assign it a string with a greeting plus
     the address the user has entered in the form. You can do so by using your
-    address object */
+    address object with .text() method */
     $greeting.text('So, you want to live at ' + address + '?');
 
-    /**/
+    /* Create a variable for the streetview map url. Use the Google Streetview API,
+    and add the address object at the end. Then append the url to <body> element by
+    using the .append() method and adding the url variable at the end*/
+    var streetviewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=600x400&location=' + address + '';
+    $body.append('<img class="bgimg" src="' + streetviewUrl + '">');
 
     // YOUR CODE GOES HERE!
 
