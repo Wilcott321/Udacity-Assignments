@@ -14,19 +14,21 @@ body {background-color: #CCC;}
     color:black;
     text-shadow: 1px 1px 3px rgba(255,255,255, .5);
     text-align: center;
+    overflow: hidden;
 }
 
 .wikipedia-container {
     float:right;
-    width:290px;
+    width: 400px;
     padding:10px;
-    margin-right: 10px;
+    margin-right: 40px;
     background-color: rgba(255,255,255,0.7);
 }
 
 .nytimes-container {
     padding: 10px;
-    margin-right:300px;
+    margin-left: 40px;
+    width: 700px;
     background-color: rgba(255,255,255,0.7);
 }
 
