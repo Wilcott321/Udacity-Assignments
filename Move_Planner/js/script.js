@@ -1,4 +1,4 @@
-
+// All code goes within this function
 function loadData() {
 
     var $body = $('body');
@@ -31,9 +31,25 @@ function loadData() {
     var streetviewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=600x400&location=' + address + '';
     $body.append('<img class="bgimg" src="' + streetviewUrl + '">');
 
-    // YOUR CODE GOES HERE!
+    /*Create a NYTimes API ajax request. Use the $getJSON() method
+    and use the docs from the jQuery ajax webpage for how to create
+    a success handler function.
+    Notes: You will need an API key from developer.nytimes.com.
+    A counter was created to iterate through the responses and post the article
+    within the <li> list*/
+    var nytimesUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key=abb9d7371d9b42dbb45de3ad6087274b'
+    $.getJSON(nytimesUrl, function(data){
+        $nytHeaderElem.text('New York Times Articles About ' + cityStr);
+        articles = data.response.docs;
+        for(var i = 0; i < articles.length; i++) {
+            var article = articles[i];
+            $nytElem.append('<li class="article">' + '<a href="'+article.web_url+'">'+article.headline.main+'</a>'+
+                '<p>' + article.snippet + '</p>'+'</li>');
+        };
+    })
 
     return false;
 };
 
+// Calls the function and places it in the form container
 $('#form-container').submit(loadData);
