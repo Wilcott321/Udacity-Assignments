@@ -3,34 +3,76 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Cat Clicker 2</title>
-	<style>
-		.container_one {float: left;}
-		.container_two {float: right;}
-	</style>
 </head>
 <body>
-	<div class="container_one">
-		<img id="lion" src="img/lion.jpg" height="300" width="450">
-		<p>Likes: <a id="likes">0</a></p>
-	</div>
-	<div class="container_two">
-		<img id="lion2" src="img/lion2.jpg" height="300" width="450">
-		<p>Likes: <a id="likes2">0</a></p>
+	<div class="container">
+		<h3>Click on a cat image</h3>
 	</div>
 	<!-- script -->
 	<script>
-		var likes = 0;
-		var likes2 = 0;
-		var lion = document.getElementById('lion');
-		var lion2 = document.getElementById('lion2');
-		lion.addEventListener('click', function(){
-			likes += 1;
-			document.getElementById('likes').innerHTML = likes;
-		}, false);
-		lion2.addEventListener('click', function(){
-			likes2 += 1;
-			document.getElementById('likes2').innerHTML = likes2;
-		}, false);
+		var cats = [
+			{
+				name: 'Sheeba',
+				image: 'img/lion.jpg',
+				count: 0,
+				id: 1
+			},
+			{
+				name: 'Kali Ma',
+				image: 'img/lion2.jpg',
+				count: 0,
+				id: 2
+			},
+			{
+				name: 'Amba',
+				image: 'img/lion3.jpg',
+				count: 0,
+				id: 3
+			},
+			{
+				name: 'Cleo',
+				image: 'img/lion4.jpg',
+				count: 0,
+				id: 4
+			},
+			{
+				name: 'Aisha',
+				image: 'img/lion5.jpg',
+				count: 0,
+				id: 5
+			}
+		]
+		function loadCats(array) {
+			for (var i=0; i < array.length; i++) {
+				var box = document.createElement('div');
+				var heading = document.createElement('h3');
+				heading.innerHTML = array[i].name;
+				box.appendChild(heading);
+
+				var catImage = document.createElement('img');
+				catImage.src = array[i].image;
+				catImage.className = 'cat';
+				box.appendChild(catImage);
+
+				var catCount = document.createElement('p');
+				catCount.innerHTML = array[i].count;
+				box.appendChild(catCount);
+				catImage.id = array[i].id;
+
+				document.body.appendChild(box);
+			}
+
+			var index = i;
+			var elem = document.getElementsByClassName('cat');
+			elem[index].addEventListener('click', function() {
+				array[index].count = array[index].count + 1;
+				var total = array[index].count;
+				var numb = document.getElementsByTagName('p')[index];
+				numb.innerHTML = total;
+			}, false);
+		}
+		loadCats(cats);
+
 	</script>
 </body>
 </html>
