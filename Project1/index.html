@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cat Clicker</title>
+</head>
+<body>
+	<img id="lion" src="img/lion.jpg">
+	<button>Like!</button>
+	<p>Likes: <a id="likes">0</a></p>
+	<!-- script -->
+	<script>
+		var likes = 0;
+		button.addEventListener('click', function(){
+			likes += 1;
+			document.getElementById('likes').innerHTML = likes;
+		}, false);
+	</script>
+</body>
+</html>
