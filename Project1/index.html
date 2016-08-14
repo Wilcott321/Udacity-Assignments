@@ -6,12 +6,12 @@
 </head>
 <body>
 	<img id="lion" src="img/lion.jpg">
-	<button>Like!</button>
+	<button id="btn">Like!</button>
 	<p>Likes: <a id="likes">0</a></p>
 	<!-- script -->
 	<script>
 		var likes = 0;
-		var button = document.getElementsByTagName('button');
+		var button = document.getElementById('btn');
 		button.addEventListener('click', function(){
 			likes += 1;
 			document.getElementById('likes').innerHTML = likes;
