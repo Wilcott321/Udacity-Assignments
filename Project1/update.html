@@ -3,6 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Cat Clicker 2</title>
+	<style>
+		.container_one {float: left;}
+		.container_two {float: right;}
+	</style>
 </head>
 <body>
 	<div class="container_one">
@@ -10,14 +14,22 @@
 		<p>Likes: <a id="likes">0</a></p>
 	</div>
 	<div class="container_two">
+		<img id="lion2" src="img/lion2.jpg" height="300" width="450">
+		<p>Likes: <a id="likes2">0</a></p>
 	</div>
 	<!-- script -->
 	<script>
 		var likes = 0;
+		var likes2 = 0;
 		var lion = document.getElementById('lion');
+		var lion2 = document.getElementById('lion2');
 		lion.addEventListener('click', function(){
 			likes += 1;
 			document.getElementById('likes').innerHTML = likes;
+		}, false);
+		lion2.addEventListener('click', function(){
+			likes2 += 1;
+			document.getElementById('likes2').innerHTML = likes2;
 		}, false);
 	</script>
 </body>
