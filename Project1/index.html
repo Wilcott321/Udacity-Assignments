@@ -11,6 +11,7 @@
 	<!-- script -->
 	<script>
 		var likes = 0;
+		var button = document.getElementsByTagName('button');
 		button.addEventListener('click', function(){
 			likes += 1;
 			document.getElementById('likes').innerHTML = likes;
